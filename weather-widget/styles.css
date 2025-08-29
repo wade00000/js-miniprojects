@@ -1,0 +1,17 @@
+.weather-widget {
+  width: 250px;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #f4f4f4;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-family: sans-serif;
+  text-align: center;
+}
+.weather-widget h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.weather-widget img {
+  width: 1oo0px;
+  height: 100px;
+}
