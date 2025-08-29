@@ -16,17 +16,29 @@ p{
     width: 20%;
     margin: 0 auto;
 }
+
 #input-card input{
     width: 20rem;
     height: 2rem;
-    border-color: brown;
+    font-size: 0.8em;
+    text-align: center;
+    border-color: rgb(165, 104, 42);
 }
 
 #input-card button{
     width: 15rem;
-    height: 2rem;
+    height: 3rem;
     margin-left: 3rem;
     border-radius: 50px;
-    border-color: brown;
+    border-color: rgb(165, 104, 42);
+    font-size: 0.8em;
     
+}
+
+#input-card select{
+    width: 4rem;
+    height: 2rem;
+    font-size: 0.5em;
+    text-align: center;
+    border-color: rgb(165, 104, 42);
 }
