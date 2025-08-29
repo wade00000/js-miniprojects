@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const numberForm = document.querySelector("#input-form");
     const selectMode = document.querySelector("#input-card select")
     const heading = document.querySelector("h1")
+    const selectSpan = document.querySelector("#select-span")
 
     const attemptsTracker = document.querySelector("#attempts")
     attemptsTracker.innerText = 0
@@ -101,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
         submitMessage.style.color = "black";
         inputCard.innerHTML = ""; // clear reset button
         selectMode.disabled = false
-        inputCard.append(selectMode,numberForm); // restore form
+        inputCard.append(selectSpan); // restore form
     });
 
     selectMode.addEventListener("change",(e)=>{
