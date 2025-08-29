@@ -1,0 +1,7 @@
+# Number Guessing Game
+
+- Generate a random Number
+- Take users guess and compare to the generated Number
+- Say if guess is too high,too low or correct
+- if correct end game
+- track number of guesses
