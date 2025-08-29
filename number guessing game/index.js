@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const numberInput = document.querySelector("#input-form input");
     const numberForm = document.querySelector("#input-form");
 
+    const attemptsTracker = document.querySelector("#attempts")
+    attemptsTracker.innerText = 0
+    
+
     // reset button
     const resetButton = document.createElement("button");
     resetButton.innerText = "Play Again";
@@ -47,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!validateNum(guess)) return;
 
         attempts++;
+        attemptsTracker.innerText = attempts
         gameLogic(guess);
         numberInput.value = ""; // clear after each guess
     });
@@ -54,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // reset game without reload
     resetButton.addEventListener("click", () => {
         attempts = 0;
+        attemptsTracker.innerText = attempts
         num = randomNumber();
         submitMessage.textContent = "🔄 New game started! Guess a number between 1 and 100.";
         submitMessage.style.color = "black";

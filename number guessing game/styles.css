@@ -1,3 +1,32 @@
 body {
     background-color: papayawhip;
+    font-size: 2rem;
+    font-family: monospace;
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+#input-card{
+    width: 20%;
+    margin: 0 auto;
+}
+#input-card input{
+    width: 20rem;
+    height: 2rem;
+    border-color: brown;
+}
+
+#input-card button{
+    width: 15rem;
+    height: 2rem;
+    margin-left: 3rem;
+    border-radius: 50px;
+    border-color: brown;
+    
 }
