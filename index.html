@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>My Projects Hub</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; background: #f4f4f9; }
+    h1 { text-align: center; }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .card:hover { transform: scale(1.05); }
+    .card a {
+      text-decoration: none;
+      color: #0070f3;
+      font-weight: bold;
+      display: block;
+      margin-top: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-    
+  <h1>My Project Hub</h1>
+  <p style="text-align:center;">Click a project to explore:</p>
+
+  <div class="projects">
+    <div class="card">
+      <h2>Background Color Changer</h2>
+      <a href="background color changer/">Open Project</a>
+    </div>
+    <div class="card">
+      <h2>Number Guessing Game</h2>
+      <a href="number guessing game/">Open Project</a>
+    </div>
+    <div class="card">
+      <h2>Password Generator</h2>
+      <a href="password generator/">Open Project</a>
+    </div>
+    <div class="card">
+      <h2>Timer</h2>
+      <a href="timer/">Open Project</a>
+    </div>
+    <div class="card">
+      <h2>Weather Widget</h2>
+      <a href="weather-widget/">Open Project</a>
+    </div>
+  </div>
 </body>
 </html>
