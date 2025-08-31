@@ -3,25 +3,42 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+   background-color: rgb(92, 62, 102); 
+   font-family: system-ui, sans-serif;
+   color: white; 
+   text-align: center;
+}
 #container{
     padding-top: 20rem;
     margin: 0 auto;
-    width: 2rem;
+    width: fit-content;
+    text-align: center;
+
 }
 
 #container input{
     width: 12rem;
     height: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 #container button{
     width: 12rem;
     height: 3rem;
     border-radius: 6rem;
+    background: #fff;
+    border: 2px solid #333;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 #container button:hover{
     cursor: pointer;
     transform: scale(1.05);
+    background: palegoldenrod;
 }
