@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    padding-top: 20rem;
+    margin: 0 auto;
+    width: 2rem;
+}
+
+#container input{
+    width: 12rem;
+    height: 3rem;
+}
+
+#container button{
+    width: 12rem;
+    height: 3rem;
+    border-radius: 6rem;
+}
+
+#container button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
