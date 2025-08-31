@@ -37,8 +37,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     }
 
 
-
-
-
+    colorCode.textContent = "rgb(255, 255, 255)"
 
 })
