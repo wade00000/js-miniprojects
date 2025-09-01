@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let attempts
-    let currAttempts
+    let attemptsLeft
+    let attemptsTaken
     let max = 100
     let min = 1
     let mode 
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
             submitMessage.textContent = "📉 Too Low!";
             submitMessage.style.color = "blue";
         } else {
-            submitMessage.textContent = `🎉 You got it in ${currAttempts - attempts} attempt(s)!`;
+            submitMessage.textContent = `🎉 You got it in ${attemptsTaken} attempt(s)!`;
             submitMessage.style.color = "green";
             inputCard.innerHTML = "" // clear form
             inputCard.append(resetButton); // show reset
@@ -54,32 +54,32 @@ document.addEventListener("DOMContentLoaded", () => {
         if(e.target.value === "Hard"){
             min = 1
             max = 1000
-            attempts = 12
-            currAttempts = 12
+            attemptsLeft = 12
+            attemptsTaken = 0
             heading.textContent = `Guess a number between ${min} and ${max}`;
             submitMessage.textContent = `🔄 New game started! Guess a number between ${min} and ${max}.Or select a new mode.`
             submitMessage.style.color = "black";
         }else if(e.target.value === "Easy"){
             min = 1
             max = 100
-            attempts = 6
-            currAttempts = 6
+            attemptsLeft = 6
+            attemptsTaken = 0
             heading.textContent = `Guess a number between ${min} and ${max}`;
             submitMessage.textContent = `🔄 New game started! Guess a number between ${min} and ${max}.Or select a new mode.`
             submitMessage.style.color = "black";
         }
-        attemptsTracker.innerText = attempts
+        attemptsTracker.innerText = attemptsLeft
         num = randomNumber()
         console.log("New number:", num);
     }
 
     function attemptsCount(){
-        if(attempts === 0 && max === 1000){
+        if(attemptsLeft === 0 && max === 1000){
             submitMessage.textContent = "No more attempts💀Game Over!"
             submitMessage.style.color = "red";
             inputCard.innerHTML = ""
             inputCard.append(resetButton)
-        }else if(attempts === 0 && max === 100){
+        }else if(attemptsLeft === 0 && max === 100){
             submitMessage.textContent = "No more attempts💀Game Over!"
             submitMessage.style.color = "red";
             inputCard.innerHTML = ""
@@ -93,7 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
     numberForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        if(attempts === undefined){
+        attemptsTaken ++
+
+        if(attemptsLeft === undefined){
             submitMessage.textContent = "Please select a mode first!"
             submitMessage.style.color = "red";
             numberInput.value = ""
@@ -109,8 +111,8 @@ document.addEventListener("DOMContentLoaded", () => {
             return
         }
 
-        attempts--;
-        attemptsTracker.innerText = attempts
+        attemptsLeft--;
+        attemptsTracker.innerText = attemptsLeft
         gameLogic(guess);
         numberInput.value = ""; // clear after each guess
         attemptsCount()
@@ -119,12 +121,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // reset game without reload
     resetButton.addEventListener("click", () => {
         if (max === 1000) {
-        attempts = 12;
+        attemptsLeft = 12;
+        attemptsTaken = 0
         } else {
-        attempts = 6;
+        attemptsLeft = 6;
+        attemptsTaken = 0
         }
 
-        attemptsTracker.innerText = attempts
+        attemptsTracker.innerText = attemptsLeft
         num = randomNumber();
         submitMessage.textContent = `🔄 New game started! Guess a number between ${min} and ${max}.`;
         submitMessage.style.color = "black";
