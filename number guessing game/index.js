@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let attempts 
+    let attempts
+    let currAttempts
     let max = 100
     let min = 1
     let mode 
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
             submitMessage.textContent = "📉 Too Low!";
             submitMessage.style.color = "blue";
         } else {
-            submitMessage.textContent = `🎉 You got it in ${attempts} attempt(s)!`;
+            submitMessage.textContent = `🎉 You got it in ${currAttempts - attempts} attempt(s)!`;
             submitMessage.style.color = "green";
             inputCard.innerHTML = "" // clear form
             inputCard.append(resetButton); // show reset
@@ -54,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             min = 1
             max = 1000
             attempts = 12
+            currAttempts = 12
             heading.textContent = `Guess a number between ${min} and ${max}`;
             submitMessage.textContent = `🔄 New game started! Guess a number between ${min} and ${max}.Or select a new mode.`
             submitMessage.style.color = "black";
@@ -61,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             min = 1
             max = 100
             attempts = 6
+            currAttempts = 6
             heading.textContent = `Guess a number between ${min} and ${max}`;
             submitMessage.textContent = `🔄 New game started! Guess a number between ${min} and ${max}.Or select a new mode.`
             submitMessage.style.color = "black";
