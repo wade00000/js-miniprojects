@@ -107,6 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!validateNum(guess)) return;
 
         if(guess == num){
+            attemptsLeft--;
+            attemptsTracker.innerText = attemptsLeft
             gameLogic(guess)
             return
         }
