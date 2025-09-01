@@ -101,6 +101,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const guess = parseInt(numberInput.value);
         if (!validateNum(guess)) return;
 
+        if(guess == num){
+            gameLogic(guess)
+            return
+        }
+
         attempts--;
         attemptsTracker.innerText = attempts
         gameLogic(guess);

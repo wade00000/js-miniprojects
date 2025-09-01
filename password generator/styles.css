@@ -3,18 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
    background-color: rgb(92, 62, 102); 
    font-family: system-ui, sans-serif;
    color: white; 
    text-align: center;
-}
-#container{
-    padding-top: 20rem;
-    margin: 0 auto;
-    width: fit-content;
-    text-align: center;
 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+#container {
+   width: 100%;
+   max-width: 400px;
 }
 
 #container input{
